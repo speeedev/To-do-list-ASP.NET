@@ -1,0 +1,7 @@
+C:\Dev\Dotnet Core\1\bin\release\net7.0\publish\1.exe
+C:\Dev\Dotnet Core\1\bin\release\net7.0\publish\appsettings.Development.json
+C:\Dev\Dotnet Core\1\bin\release\net7.0\publish\appsettings.json
+C:\Dev\Dotnet Core\1\bin\release\net7.0\publish\1.dll
+C:\Dev\Dotnet Core\1\bin\release\net7.0\publish\1.deps.json
+C:\Dev\Dotnet Core\1\bin\release\net7.0\publish\1.runtimeconfig.json
+C:\Dev\Dotnet Core\1\bin\release\net7.0\publish\1.pdb
