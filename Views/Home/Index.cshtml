@@ -1,0 +1,36 @@
+﻿@model _1.Models.TodoViewModel
+
+@{
+    ViewData["Title"] = "Todolist";
+}
+<h1 class="text-center">@ViewData["Title"]</h1>
+<form action="/add-todo" method="post">
+    @Html.AntiForgeryToken()
+    <div class="row bg-silver p-5">
+        <div class="col-10">
+            <input asp-for="Title" type="text" class="form-control" placeholder="To-do name" id="txtTitle">
+            <span asp-validation-for="Title" class="text-danger mt-5"></span>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-success" id="btnAdd">Add</button>
+        </div>
+    </div>
+</form>
+<h3>All Todos</h3>
+@if (Model.Todos.Count() == 0)
+{
+    <h5 class="text-danger">Not found.</h5>
+}
+else
+{
+    <div class="row">
+        <ul class="list-group mt-5" id="list">
+            @foreach (var item in Model.Todos!)
+            {
+                <li data-action="update-todo" data-id="@item.Id"
+                    class='list-group-item @(item.IsComplated==false ? "list-group-item-success m-1":"list-group-item-danger m-1 text-decoration-line-through")'>
+                    @item.Title <button class="btn-close float-end" data-action="delete-todo" data-id="@item.Id"></button></li>
+            }
+        </ul>
+    </div>
+}
